@@ -1,0 +1,6 @@
+%h1
+  Editing auction
+=render :partial => "form", :locals => {:auction => @auction}
+= link_to 'Show', @auction
+
+= link_to 'Back', auctions_path

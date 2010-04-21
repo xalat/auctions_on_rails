@@ -1,0 +1,205 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (103.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (75.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAuctions (20100420114934)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "auctions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "exchange_rate" float, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100420114934')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("auctions")[0m
+
+
+Processing AuctionsController#index (for 127.0.0.1 at 2010-04-21 14:58:54) [GET]
+
+NoMethodError (undefined method `authenticate_user!' for #<AuctionsController:0x7fd03df4>):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AuctionsController#index (for 127.0.0.1 at 2010-04-21 15:01:03) [GET]
+
+NoMethodError (undefined method `authenticate_user!' for #<AuctionsController:0x7f2c809c>):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AuctionsController#index (for 127.0.0.1 at 2010-04-21 15:01:53) [GET]
+  [4;36;1mAuction Load (0.0ms)[0m   [0;1mSELECT * FROM "auctions" [0m
+
+ActionView::MissingTemplate (Missing template auctions/index.erb in view path app/views):
+  app/controllers/auctions_controller.rb:8:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AuctionsController#index (for 127.0.0.1 at 2010-04-21 15:04:55) [GET]
+  [4;35;1mAuction Load (0.0ms)[0m   [0mSELECT * FROM "auctions" [0m
+
+ActionView::MissingTemplate (Missing template auctions/index.erb in view path app/views):
+  app/controllers/auctions_controller.rb:8:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AuctionsController#index (for 127.0.0.1 at 2010-04-21 15:05:06) [GET]
+  [4;36;1mAuction Load (1.0ms)[0m   [0;1mSELECT * FROM "auctions" [0m
+
+ActionView::MissingTemplate (Missing template auctions/index.erb in view path app/views):
+  app/controllers/auctions_controller.rb:8:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AuctionsController#index (for 127.0.0.1 at 2010-04-21 15:06:52) [GET]
+  [4;36;1mAuction Load (1.0ms)[0m   [0;1mSELECT * FROM "auctions" [0m
+Rendering auctions/index
+Completed in 39ms (View: 20, DB: 1) | 200 OK [http://localhost/auctions]
+
+
+Processing AuctionsController#index (for 127.0.0.1 at 2010-04-21 15:09:41) [GET]
+  [4;35;1mAuction Load (1.0ms)[0m   [0mSELECT * FROM "auctions" [0m
+Rendering auctions/index
+Completed in 19ms (View: 1, DB: 1) | 200 OK [http://localhost/auctions]
+
+
+Processing AuctionsController#index to xml (for 127.0.0.1 at 2010-04-21 15:10:28) [GET]
+  [4;36;1mAuction Load (1.0ms)[0m   [0;1mSELECT * FROM "auctions" [0m
+Completed in 20ms (View: 3, DB: 1) | 200 OK [http://localhost/auctions.xml]
+
+
+Processing AuctionsController#index (for 127.0.0.1 at 2010-04-21 15:12:26) [GET]
+  [4;35;1mAuction Load (1.0ms)[0m   [0mSELECT * FROM "auctions" [0m
+Rendering auctions/index
+Completed in 20ms (View: 2, DB: 1) | 200 OK [http://localhost/auctions]
+  [4;36;1mAuction Create (2.0ms)[0m   [0;1mINSERT INTO "auctions" ("name", "created_at", "updated_at", "exchange_rate") VALUES('GOOG', '2010-04-21 14:25:23', '2010-04-21 14:25:23', 558.61)[0m
+  [4;35;1mAuction Create (2.0ms)[0m   [0mINSERT INTO "auctions" ("name", "created_at", "updated_at", "exchange_rate") VALUES('EBAY', '2010-04-21 14:25:24', '2010-04-21 14:25:24', 26.34)[0m
+  [4;36;1mAuction Create (1.0ms)[0m   [0;1mINSERT INTO "auctions" ("name", "created_at", "updated_at", "exchange_rate") VALUES('AMZN', '2010-04-21 14:25:24', '2010-04-21 14:25:24', 148.09)[0m
+  [4;35;1mAuction Create (1.0ms)[0m   [0mINSERT INTO "auctions" ("name", "created_at", "updated_at", "exchange_rate") VALUES('MSFT', '2010-04-21 14:25:24', '2010-04-21 14:25:24', 31.405)[0m
+  [4;36;1mAuction Create (1.0ms)[0m   [0;1mINSERT INTO "auctions" ("name", "created_at", "updated_at", "exchange_rate") VALUES('AAPL', '2010-04-21 14:25:24', '2010-04-21 14:25:24', 259.51)[0m
+
+
+Processing ApplicationController#index to xml (for 127.0.0.1 at 2010-04-21 16:25:38) [GET]
+
+SyntaxError (/home/ziggourat/auctions_on_rails/app/controllers/auctions_controller.rb:26: syntax error, unexpected kEND
+/home/ziggourat/auctions_on_rails/app/controllers/auctions_controller.rb:99: syntax error, unexpected $end, expecting kEND):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (137.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-21 16:26:01) [GET]
+
+SyntaxError (/home/ziggourat/auctions_on_rails/app/controllers/auctions_controller.rb:26: syntax error, unexpected kEND
+/home/ziggourat/auctions_on_rails/app/controllers/auctions_controller.rb:99: syntax error, unexpected $end, expecting kEND):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AuctionsController#index (for 127.0.0.1 at 2010-04-21 16:26:24) [GET]
+  [4;36;1mAuction Load (1.0ms)[0m   [0;1mSELECT * FROM "auctions" [0m
+Rendering auctions/index
+Completed in 172ms (View: 153, DB: 1) | 200 OK [http://localhost/auctions]
+
+
+Processing AuctionsController#index to xml (for 127.0.0.1 at 2010-04-21 16:26:30) [GET]
+  [4;35;1mAuction Load (2.0ms)[0m   [0mSELECT * FROM "auctions" [0m
+Completed in 730ms (View: 711, DB: 2) | 200 OK [http://localhost/auctions.xml]
+
+
+Processing AuctionsController#index (for 127.0.0.1 at 2010-04-21 16:26:39) [GET]
+  [4;36;1mAuction Load (1.0ms)[0m   [0;1mSELECT * FROM "auctions" [0m
+Rendering auctions/index
+Completed in 30ms (View: 10, DB: 1) | 200 OK [http://localhost/auctions]

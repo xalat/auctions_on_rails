@@ -1,0 +1,13 @@
+%h1
+  Recherche
+%p
+  Resultat de la recherche
+  %br  
+  - unless(@auctions==nil)
+    - for auction in @auctions
+      = auction.name
+      %br
+  = will_paginate @auctions
+  %br
+  
+  
